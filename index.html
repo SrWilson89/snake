@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro Contable</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="79856347.jfif" />
+</head>
+<body>
+    <div class="container">
+        <h2>Libro Contable</h2>
+        
+        <div class="table-container">
+            <table id="accountingTable">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Debe</th>
+                        <th>Haber</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <input type="date" id="newDate" required>
+                        </td>
+                        <td>
+                            <input type="text" id="newDescription" placeholder="Descripción" required>
+                        </td>
+                        <td>
+                            <input type="number" id="newDebit" placeholder="0.00" step="0.01" min="0">
+                        </td>
+                        <td>
+                            <input type="number" id="newCredit" placeholder="0.00" step="0.01" min="0">
+                        </td>
+                        <td>
+                            <button id="addButton" class="add-btn">+</button>
+                        </td>
+                    </tr>
+                    <tr class="totals-row">
+                        <td colspan="2">Totales</td>
+                        <td id="totalDebit">0.00</td>
+                        <td id="totalCredit">0.00</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
