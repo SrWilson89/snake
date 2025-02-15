@@ -3,55 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro Contable</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="79856347.jfif" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>Libro Contable</h2>
-        
-        <div class="table-container">
-            <table id="accountingTable">
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Descripción</th>
-                        <th>Debe</th>
-                        <th>Haber</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>
-                            <input type="date" id="newDate" required>
-                        </td>
-                        <td>
-                            <input type="text" id="newDescription" placeholder="Descripción" required>
-                        </td>
-                        <td>
-                            <input type="number" id="newDebit" placeholder="0.00" step="0.01" min="0">
-                        </td>
-                        <td>
-                            <input type="number" id="newCredit" placeholder="0.00" step="0.01" min="0">
-                        </td>
-                        <td>
-                            <button id="addButton" class="add-btn">+</button>
-                        </td>
-                    </tr>
-                    <tr class="totals-row">
-                        <td colspan="2">Totales</td>
-                        <td id="totalDebit">0.00</td>
-                        <td id="totalCredit">0.00</td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
+        <h1>Snake Game</h1>
+        <div class="menu">
+            <button onclick="setDifficulty('easy')">Fácil</button>
+            <button onclick="setDifficulty('medium')">Medio</button>
+            <button onclick="setDifficulty('hard')">Difícil</button>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="score">Puntuación: <span id="score">0</span></div>
+        <div class="high-score">Máxima Puntuación: <span id="highScore">0</span></div>
+        <div class="controls">
+            <button onclick="moveUp()">↑</button>
+            <button onclick="moveDown()">↓</button>
+            <button onclick="moveLeft()">←</button>
+            <button onclick="moveRight()">→</button>
         </div>
     </div>
-    <script type="module" src="/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
